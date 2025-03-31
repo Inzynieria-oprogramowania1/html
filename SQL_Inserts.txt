@@ -1,0 +1,59 @@
+INSERT INTO Parts (kategoria, podkategoria, marka_samochodu, stan, cena) VALUES
+('Silnik', 'Turbosprężarka', 'Audi', 'Nowy', 2500.00),
+('Silnik', 'Alternator', 'BMW', 'Używany', 800.00),
+('Układ hamulcowy', 'Klocki hamulcowe', 'Mercedes', 'Nowy', 300.00),
+('Układ hamulcowy', 'Tarcze hamulcowe', 'Volkswagen', 'Nowy', 450.00),
+('Zawieszenie', 'Amortyzator', 'Opel', 'Nowy', 600.00),
+('Zawieszenie', 'Sprężyna zawieszenia', 'Ford', 'Używany', 250.00),
+('Karoseria', 'Maska', 'Toyota', 'Nowy', 1200.00),
+('Karoseria', 'Zderzak', 'Honda', 'Używany', 700.00),
+('Oświetlenie', 'Reflektor', 'Mazda', 'Nowy', 900.00),
+('Oświetlenie', 'Kierunkowskaz', 'Nissan', 'Nowy', 150.00),
+('Wnętrze', 'Fotel', 'Renault', 'Używany', 500.00),
+('Wnętrze', 'Kierownica', 'Peugeot', 'Nowy', 350.00),
+('Elektronika', 'Radio', 'Kia', 'Nowy', 400.00),
+('Elektronika', 'Czujnik parkowania', 'Hyundai', 'Nowy', 250.00),
+('Układ wydechowy', 'Tłumik', 'Skoda', 'Używany', 600.00),
+('Układ wydechowy', 'Katalizator', 'Fiat', 'Nowy', 1800.00),
+('Silnik', 'Pompa paliwa', 'Jeep', 'Nowy', 750.00),
+('Układ chłodzenia', 'Chłodnica', 'Volvo', 'Nowy', 1100.00),
+('Układ chłodzenia', 'Termostat', 'Citroen', 'Nowy', 200.00),
+('Napęd', 'Sprzęgło', 'Seat', 'Używany', 900.00);
+
+INSERT INTO Clients (imie, nazwisko, nr_telefonu, mail, kod_pocztowy, ulica, numer_ulicy, miejscowosc) VALUES
+('Jan', 'Kowalski', '123456789', 'jan.kowalski@mail.com', '00-001', 'Warszawska', '10', 'Warszawa'),
+('Anna', 'Nowak', '987654321', 'anna.nowak@mail.com', '30-002', 'Krakowska', '20', 'Kraków'),
+('Piotr', 'Wiśniewski', '111222333', 'piotr.wisniewski@mail.com', '40-003', 'Poznańska', '15', 'Poznań'),
+('Maria', 'Lis', '444555666', 'maria.lis@mail.com', '50-004', 'Gdańska', '25', 'Gdańsk'),
+('Tomasz', 'Dąbrowski', '777888999', 'tomasz.dabrowski@mail.com', '60-005', 'Łódzka', '30', 'Łódź'),
+('Karolina', 'Zielińska', '159753486', 'karolina.zielinska@mail.com', '70-006', 'Wrocławska', '12', 'Wrocław'),
+('Michał', 'Szymański', '951753852', 'michal.szymanski@mail.com', '80-007', 'Szczecińska', '14', 'Szczecin'),
+('Magdalena', 'Lewandowska', '852963741', 'magdalena.lewandowska@mail.com', '90-008', 'Bydgoska', '16', 'Bydgoszcz'),
+('Jakub', 'Wojciechowski', '753159852', 'jakub.wojciechowski@mail.com', '10-009', 'Katowicka', '18', 'Katowice'),
+('Zuzanna', 'Kamińska', '369258147', 'zuzanna.kaminska@mail.com', '20-010', 'Lublin', '22', 'Lublin');
+
+INSERT INTO Orders (client_id, part_id, data_zamowienia, data_otrzymania) VALUES
+(1, 3, '2024-03-01', '2024-03-05'),
+(2, 7, '2024-03-02', '2024-03-06'),
+(3, 15, '2024-03-03', '2024-03-07'),
+(4, 11, '2024-03-04', '2024-03-08'),
+(5, 6, '2024-03-05', '2024-03-09'),
+(6, 18, '2024-03-06', '2024-03-10'),
+(7, 14, '2024-03-07', '2024-03-11'),
+(8, 20, '2024-03-08', '2024-03-12'),
+(9, 9, '2024-03-09', '2024-03-13'),
+(10, 2, '2024-03-10', '2024-03-14');
+
+INSERT INTO Workers (imie, nazwisko, nr_telefonu, dzial, data_zatrudnienia) VALUES
+('Adam', 'Nowicki', '123456789', 'Mechanik', '2020-06-15'),
+('Ewa', 'Kowalczyk', '987654321', 'Obsługa klienta', '2019-04-20'),
+('Marek', 'Wiśniewski', '111222333', 'Sprzedaż', '2021-01-10'),
+('Katarzyna', 'Lewandowska', '444555666', 'Magazyn', '2018-09-05'),
+('Tomasz', 'Dąbrowski', '777888999', 'Mechanik', '2022-02-25'),
+('Karolina', 'Zielińska', '159753486', 'Obsługa klienta', '2017-12-11'),
+('Michał', 'Szymański', '951753852', 'Sprzedaż', '2023-07-07'),
+('Magdalena', 'Lewandowska', '852963741', 'Magazyn', '2016-05-19'),
+('Jakub', 'Wojciechowski', '753159852', 'Mechanik', '2021-10-30'),
+('Zuzanna', 'Kamińska', '369258147', 'Obsługa klienta', '2019-08-14'),
+('Paweł', 'Jankowski', '123987456', 'Serwis', '2018-05-22'),
+('Agnieszka', 'Kozłowska', '789654123', 'Sprzedaż', '2020-11-13');
