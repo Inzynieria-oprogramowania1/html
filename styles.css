@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
 }
 
 nav {
@@ -33,7 +36,7 @@ nav ul li a {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background: #f9f9f9;
+    background: #fff;
 }
 
 .panel.active {
@@ -44,6 +47,9 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 input {
@@ -58,4 +64,21 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #333;
+    color: white;
 }
