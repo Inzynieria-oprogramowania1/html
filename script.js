@@ -15,6 +15,11 @@ function addPart() {
     let partBrand = prompt("Podaj markę:");
     let partCondition = prompt("Podaj stan:");
 
+    if (!partName || !partCost || !partQty || !partBrand || !partCondition) {
+        alert("Wszystkie pola muszą być wypełnione!");
+        return;
+    }
+
     let inventoryTable = document.getElementById("inventoryTable");
     let newRow = inventoryTable.insertRow();
     
