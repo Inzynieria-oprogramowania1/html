@@ -1,0 +1,67 @@
+//SQL
+
+CREATE DATABASE IF NOT EXISTS VroomTool;
+USE VroomTool;
+
+CREATE TABLE Parts (
+    part_id INT AUTO_INCREMENT PRIMARY KEY,
+    kategoria VARCHAR(30),
+    podkategoria VARCHAR(30),
+    marka_samochodu VARCHAR(30),
+    stan VARCHAR(50),
+    cena DECIMAL(10,2)
+);
+
+CREATE TABLE Workers (
+    worker_id INT AUTO_INCREMENT PRIMARY KEY,
+    imie VARCHAR(30),
+    nazwisko VARCHAR(30),
+    nr_telefonu VARCHAR(9),
+    dzial VARCHAR(50),
+    data_zatrudnienia DATE
+);
+
+CREATE TABLE Clients (
+    client_id INT AUTO_INCREMENT PRIMARY KEY,
+    imie VARCHAR(30),
+    nazwisko VARCHAR(30),
+    nr_telefonu VARCHAR(9),
+    mail VARCHAR(40),
+    kod_pocztowy VARCHAR(6),
+    ulica VARCHAR(50),
+    numer_ulicy VARCHAR(3),
+    miejscowosc VARCHAR(50)
+);
+
+CREATE TABLE Orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    client_id INT,
+    part_id INT,
+    data_zamowienia DATE,
+    data_otrzymania DATE,
+    FOREIGN KEY (client_id) REFERENCES Clients(client_id),
+    FOREIGN KEY (part_id) REFERENCES Parts(part_id)
+);
+
+//PHP W HTML
+
+<?php
+    $servername = "localhost"; // Adres serwera bazy danych
+    $username = "root"; // Nazwa użytkownika MySQL
+    $password = ""; // Hasło użytkownika MySQL
+    $dbname = "VroomTool"; // Nazwa bazy danych
+
+    // Tworzenie połączenia
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Sprawdzenie połączenia
+    if ($conn->connect_error) {
+        $status = "Połączenie nieudane: " . $conn->connect_error;
+    } else {
+        $status = "Połączenie udane";
+    }
+    ?>
+
+    <h2><?php echo $status; ?></h2>
+    
+    <?php $conn->close(); ?>
